@@ -6,10 +6,7 @@ Este repositorio contiene múltiples proyectos para practicar los conceptos dado
 ## Tabla de Contenidos
 
 - [Comenzando](#comenzando)
-- [Crear un Nuevo Proyecto TypeScript](#crear-un-nuevo-proyecto-typescript)
-- [Scripts](#scripts)
-- [Contribuyendo](#contribuyendo)
-- [Licencia](#licencia)
+- [Crear un nuevo proyecto de TypeScript](#crear-un-nuevo-proyecto-de-typescript)
 
 ## Comenzando
 
@@ -33,7 +30,7 @@ Antes de crear o trabajar en los proyectos dentro de este monorepositorio, aseg�
    npm install
    ```
 
-## Crear un Nuevo Proyecto TypeScript
+## Crear un nuevo proyecto de TypeScript
 
 Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue estos pasos:
 
@@ -50,26 +47,42 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    npm init -y
    ```
 
-3. **Instalar TypeScript**: Añade TypeScript y las dependencias necesarias:
+3. **Instalar TypeScript**: Añade TypeScript y las dependencias necesarias, incluido ts-node-dev:
 
    ```bash
-   npm install --save-dev typescript @types/node
+   npm install --save-dev typescript @types/node ts-node-dev
    ```
 
-4. **Crear tsconfig.json**: Crea un archivo `tsconfig.json` con la siguiente configuración básica:
+4. **Agregar Scripts**: Actualiza el `package.json` con scripts útiles:
 
    ```json
    {
-     "compilerOptions": {
-       "target": "ES6",
-       "module": "commonjs",
-       "outDir": "./dist",
-       "rootDir": "./src",
-       "strict": true,
-       "esModuleInterop": true
-     },
-     "include": ["src/**/*.ts"],
-     "exclude": ["node_modules"]
+     "scripts": {
+       "tsc": "tsc",
+       "start": "node build/index.js",
+       "dev": "ts-node-dev src/index.ts"
+     }
+   }
+   ```
+
+5. **Crear tsconfig.json**: Crea un archivo `tsconfig.json` con la siguiente configuración básica:
+
+   ```bash
+      npm run tsc -- --init
+   ```
+
+   ```json
+   {
+   "compilerOptions": {
+      "target": "ES6",
+      "module": "commonjs",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true
+   },
+   "include": ["src/**/*.ts"],
+   "exclude": ["node_modules"]
    }
    ```
 
@@ -80,77 +93,12 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    echo "console.log('Hola, Mundo!');" > src/index.ts
    ```
 
-6. **Agregar Scripts**: Actualiza el `package.json` con scripts útiles:
-
-   ```json
-   {
-     "scripts": {
-       "build": "tsc",
-       "start": "node dist/index.js"
-     }
-   }
-   ```
-
-7. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
-   ```bash
-   npm run build
-   npm start
-   ```
-
-¡Felicidades! Has creado con éxito un nuevo proyecto TypeScript dentro del monorepositorio.
-
-## Instalar Nodemon
-
-`nodemon` es una herramienta que ayuda a desarrollar aplicaciones Node.js al reiniciarlas automáticamente cuando se detectan cambios en los archivos. Para instalar y usar `nodemon` en tu proyecto, sigue estos pasos:
-
-1. **Instalar Nodemon**: Añádelo como una dependencia de desarrollo:
-
-   ```bash
-   npm install --save-dev nodemon
-   ```
-
-2. **Actualizar Scripts en package.json**: Modifica el `package.json` para agregar un script que use `nodemon`:
-
-   ```json
-   {
-     "scripts": {
-       "build": "tsc",
-       "start": "node dist/index.js",
-       "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts"
-     }
-   }
-   ```
-
-   - El script `"dev"` utiliza `nodemon` para observar los cambios en los archivos TypeScript dentro de la carpeta `src` y ejecutar el archivo `src/index.ts` usando `ts-node`.
-
-3. **Ejecutar el Proyecto en Modo Desarrollo**: Ahora puedes ejecutar el proyecto en modo desarrollo con:
-
+6. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
    ```bash
    npm run dev
    ```
 
-   Esto iniciará `nodemon`, que compilará y ejecutará automáticamente tu aplicación cada vez que realices cambios en el código.
-
-## Scripts
-
-Aquí hay algunos scripts comunes que puedes usar en la raíz del monorepositorio:
-
-- **Instalar Dependencias**: Instala todas las dependencias para los proyectos.
-
-  ```bash
-  npm install
-  ```
-
-- **Compilar Todos los Proyectos**: Compila todos los proyectos TypeScript en el repositorio.
-
-  ```bash
-  npm run build
-  ```
-
-- **Limpiar**: Elimina todas las carpetas `dist` en los proyectos.
-  ```bash
-  npm run clean
-  ```
+¡Felicidades! Has creado con éxito un nuevo proyecto TypeScript dentro del monorepositorio.
 
 <!-- ## Contribuyendo
 
