@@ -86,14 +86,14 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    }
    ```
 
-5. **Configurar la Estructura del Proyecto**: Crea una estructura básica para el proyecto:
+6. **Configurar la Estructura del Proyecto**: Crea una estructura básica para el proyecto:
 
    ```bash
    mkdir src
    echo "console.log('Hola, Mundo!');" > src/index.ts
    ```
 
-6. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
+7. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
    ```bash
    npm run dev
    ```
