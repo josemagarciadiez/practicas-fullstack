@@ -64,12 +64,14 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
      }
    }
    ```
-
-5. **Crear tsconfig.json**: Crea un archivo `tsconfig.json` con la siguiente configuración básica:
+5. **Configurar la Estructura del Proyecto**: Crea una estructura básica para el proyecto:
 
    ```bash
-      npm run tsc -- --init
+   mkdir src
+   echo "console.log('Hola, Mundo!');" > src/index.ts
    ```
+
+6. **Crear tsconfig.json**: Crea un archivo `tsconfig.json` con la siguiente configuración básica:
 
    ```json
    {
@@ -86,12 +88,6 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    }
    ```
 
-6. **Configurar la Estructura del Proyecto**: Crea una estructura básica para el proyecto:
-
-   ```bash
-   mkdir src
-   echo "console.log('Hola, Mundo!');" > src/index.ts
-   ```
 
 7. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
    ```bash
