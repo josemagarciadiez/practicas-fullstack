@@ -68,11 +68,16 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
 
    ```bash
    mkdir src
-   echo "console.log('Hola, Mundo!');" > src/index.ts
+   touch src/index.ts
    ```
 
-6. **Crear tsconfig.json**: Crea un archivo `tsconfig.json` con la siguiente configuración básica:
+6. **Crear tsconfig.json**: Crea un archivo `tsconfig.json`:
 
+   ```bash
+   touch tsconfig.json
+   ```
+
+7. **Configura tsconfig.json**: Agrega la siguiente configuración básica al archivo `tsconfig.json`:
    ```json
    {
    "compilerOptions": {
@@ -89,7 +94,7 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    ```
 
 
-7. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
+8. **Compilar y Ejecutar**: Compila el código TypeScript y ejecuta el proyecto:
    ```bash
    npm run dev
    ```
