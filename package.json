@@ -12,5 +12,10 @@
   "keywords": [],
   "author": "José García",
   "license": "ISC",
-  "description": "Monorepositorio multipaquete para practicas de la carrera de Desarrollador Web Fullstack - Olavarría"
+  "description": "Monorepositorio multipaquete para practicas de la carrera de Desarrollador Web Fullstack - Olavarría",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
 }

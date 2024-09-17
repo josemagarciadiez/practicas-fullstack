@@ -1,27 +1,5 @@
-class Television {
-  private isOn: boolean | undefined;
+import { Person } from "./Person";
 
-  constructor(isOn: boolean) {
-    this.isOn = isOn;
-  }
+const persona = new Person("José", 35540065);
 
-  checkState(): void {
-    if (this.isOn) {
-      console.log("El televisor esta encendido.");
-    } else {
-      console.log("El televisor esta apagado.");
-    }
-  }
-  turnOn(): void {
-    this.isOn = true;
-  }
-  turnOff(): void {
-    this.isOn = false;
-  }
-}
-
-const myTv = new Television(false);
-
-myTv.checkState();
-myTv.turnOn();
-myTv.checkState();
+console.log(persona.getName());
