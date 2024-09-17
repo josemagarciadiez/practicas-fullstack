@@ -59,8 +59,9 @@ Para crear un nuevo proyecto TypeScript dentro de la carpeta `projects`, sigue e
    {
      "scripts": {
        "tsc": "tsc",
-       "start": "node build/index.js",
-       "dev": "ts-node-dev src/index.ts"
+       "build": "node build/index.js",
+       "dev": "ts-node-dev src/index.ts",
+       "tnode": "ts-node-dev"
      }
    }
    ```
